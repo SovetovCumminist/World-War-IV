@@ -1,0 +1,23 @@
+ideas = {
+	country = {
+	
+	Vladimir_Lenin_Cult = {
+		
+		picture = Vladimir_Lenin
+		
+		allowed = {
+			has_government = communism
+		}
+		
+		allowed_civil_war = {
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_factor = 0.05
+			political_power_factor = 0.25
+			communism_drift = 0.01
+		}
+	}
+}

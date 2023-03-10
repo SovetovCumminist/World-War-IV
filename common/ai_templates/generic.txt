@@ -1,0 +1,2121 @@
+# спизженно у мд
+garrison_generic = {
+	roles = { garrison }
+	upgrade_prio = {
+		factor = 0
+		modifier = { add = 5 ai_has_role_template = garrison }
+	}
+	match_to_count = 0.5
+
+	Militia_garrison = {
+		reinforce_prio = 0
+		custom_icon = 7 #?
+		upgrade_prio = {
+			factor = 0
+			modifier = { factor = 0 is_major = yes }
+			modifier = { factor = 2 num_of_military_factories < 6 }
+			modifier = { factor = 0 num_of_military_factories > 5 }
+		}
+		production_prio = {
+			factor = 1
+			modifier = { factor = 0 num_of_factories > 20 }
+			modifier = { factor = 2 num_of_military_factories < 6 }
+			modifier = { factor = 0 is_major = yes }
+			modifier = {
+				factor = 0
+				NOT = { tag = SOV tag = USA tag = CHI tag = GER tag = FRA tag = ENG }
+			}
+		}
+
+		target_width = 15
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			5.00 #-- defense
+			0.00 #-- breakthrough
+			1.00 #-- hardness
+			5.00 #-- soft_attack
+			0.00 #-- hard_attack
+			1.00 #-- recon
+			3.00 #-- entrenchment
+			0.00 #-- initiative
+			0.10 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				special_militia_bat = 4
+			}
+		}
+
+		allowed_types = { special_militia_bat }
+	}
+
+	L_Inf_gar = {
+		reinforce_prio = 0
+
+		upgrade_prio = {
+			factor = 0
+			modifier = { factor = 0 is_major = yes }
+			modifier = { factor = 2 num_of_military_factories < 6 }
+			modifier = { factor = 0 num_of_military_factories > 5 }
+		}
+		production_prio = {
+			factor = 1
+			modifier = { factor = 0 num_of_factories > 20 }
+			modifier = { factor = 2 num_of_military_factories < 6 }
+			modifier = { factor = 0 is_major = yes }
+			modifier = {
+				factor = 0
+				NOT = { tag = SOV tag = USA tag = CHI tag = GER tag = FRA tag = ENG }
+			}
+		}
+		target_width = 12.0
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			5.00 #-- defense
+			0.00 #-- breakthrough
+			1.00 #-- hardness
+			5.00 #-- soft_attack
+			0.00 #-- hard_attack
+			1.00 #-- recon
+			3.00 #-- entrenchment
+			0.00 #-- initiative
+			0.10 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				inf_infantry_bat = 3
+				inf_engeener_bat = 1
+			}
+		}
+
+		allowed_types = {
+			inf_infantry_bat
+			inf_engeener_bat
+		}
+	}
+}
+
+Militia_generic = {
+	roles = { Militia }
+	upgrade_prio = {
+		factor = 1
+		modifier = { factor = 5 has_civil_war = yes }
+		modifier = { factor = 0 has_civil_war = no }
+	}
+	match_to_count = 0.8
+
+	Militia_generic = {
+		reinforce_prio = 0
+		upgrade_prio = { factor = 1 }
+		production_prio = {
+			factor = 1
+			modifier = { factor = 1 num_of_factories < 25 }
+			modifier = { factor = 0 num_of_factories > 24 }
+			modifier = { factor = 2 has_civil_war = yes }
+			modifier = { factor = 0 is_major =yes }
+		}
+
+		target_width = 15
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = { special_militia_bat = 5 }
+		}
+
+		allowed_types = { special_militia_bat }
+
+	}
+	militia_brigade = {
+		reinforce_prio = 0
+		upgrade_prio = { factor = 1 }
+		production_prio = {
+			factor = 1
+			modifier = { factor = 1 num_of_factories > 25 }
+			modifier = { factor = 2 has_civil_war = yes }
+			modifier = { factor = 0 is_major = yes }
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = { weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				special_militia_bat = 9
+				inf_engeener_bat = 1
+			}
+			support = {
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			special_militia_bat
+			inf_engeener_bat
+			comp_recon
+		}
+	}
+}
+
+#Light Divisions
+L_Inf_generic = {
+	roles = { L_Inf }
+	upgrade_prio = {
+		factor = 1
+		modifier = { factor = 150 surrender_progress > 0.50 }
+	}
+
+	match_to_count = 0.8
+
+	L_Inf_brigade = {
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 150 surrender_progress > 0.50 }
+		}
+		production_prio = {
+			factor = 1
+			modifier = { factor = 2 num_of_factories < 50 }
+			modifier = { factor = 0 num_of_factories > 49 }
+			modifier = { factor = 0 is_major = yes }
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			5.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			5.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 5000.0
+
+			regiments = {
+				inf_infantry_bat = 8
+				inf_engeener_bat = 1
+				inf_artillery_bat = 1
+			}
+			support = {
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			inf_infantry_bat
+			inf_engeener_bat
+			comp_recon
+			inf_artillery_bat
+		}
+	}
+
+	L_Inf_division = {
+		upgrade_prio = {
+			factor = 1
+			modifier = {
+				factor = 150
+				surrender_progress > 0.50
+			}
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 2
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 0
+				is_major =yes
+			}
+		}
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 15000.0
+			regiments = {
+				inf_infantry_bat = 15
+				inf_artillery_bat = 2
+				inf_engeener_bat = 2
+				inf_recon_bat = 1
+			}
+			support = {
+				comp_recon = 1
+				comp_engeener = 1
+			}
+		}
+
+		allowed_types = {
+			inf_infantry_bat
+			inf_engeener_bat
+			inf_recon_bat
+			inf_artillery_bat
+		}
+	}
+}
+
+#Marines
+marines_generic = {
+	roles = { marines }
+	upgrade_prio = {
+		factor = 1
+	}
+
+	match_to_count = 0.8
+
+	light_marine_brigades = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 1
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 0
+				num_of_factories > 49
+			}
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 5000.0
+
+			regiments = {
+				inf_marine_bat = 9 #9*3 = 27w
+			}
+			support = {
+				comp_engeener = 1
+				inf_artillery_battery = 1
+				comp_recon = 1
+			} #3w
+			#30w Light Marine Divisions
+		}
+
+		allowed_types = {
+			inf_marine_bat
+			inf_artillery_bat
+			comp_engeener
+			comp_engeener
+			comp_recon
+		}
+	}
+	light_marines_divisions = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 2
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+		}
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 5500.0
+
+			regiments = {
+				inf_marine_bat = 15
+				inf_artillery_bat = 2
+				inf_engeener_bat = 2
+				inf_recon_bat = 1
+			}
+			support = {
+				comp_recon = 1
+				comp_engeener = 1
+			}
+		}
+
+		allowed_types = {
+			inf_marine_bat
+			inf_artillery_bat
+			inf_engeener_bat
+			inf_recon_bat
+			comp_engeener
+		}
+	}
+	mot_marines_brigade = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 1
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 0
+				num_of_factories > 49
+			}
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				mech_marine_bat = 6
+				inf_recon_bat = 1
+			}
+			support = {
+				comp_engeener = 1
+			}
+		}
+
+		allowed_types = {
+			mech_marine_bat
+			inf_recon_bat
+			comp_engeener
+		}
+	}
+	mot_marines_divisions = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 2
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+		}
+
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 15000
+			regiments = {
+				mech_marine_bat = 15
+			}
+			support = {
+				comp_recon = 1
+				comp_engeener = 1
+			}
+		}
+
+		allowed_types = {
+			mech_marine_bat
+			comp_recon
+			comp_engeener
+		}
+	}
+}
+
+#Special Forces
+special_operational_bat_generic = {
+	roles = { special_operational_bat }
+	upgrade_prio = {
+		factor = 1
+	}
+
+	match_to_count = 0.8
+
+	special_operational_bat_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 0
+			modifier = {
+				factor = 1
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 0
+				num_of_factories > 49
+			}
+		}
+
+		reinforce_prio = 2
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				special_operational_bat = 9
+			}
+			support = {
+				comp_recon = 1
+				comp_engeener = 1
+				inf_artillery_battery = 1
+			}
+		}
+
+		allowed_types = {
+			special_operational_bat
+			comp_engeener
+			inf_artillery_battery
+			comp_recon
+		}
+
+
+	}
+
+	special_operational_bat_division = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 0
+			modifier = {
+				factor = 1
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+		}
+
+		reinforce_prio = 2
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 60
+			match_value = 15000.0
+			regiments = {
+				special_operational_bat = 18
+				inf_engeener_bat = 1
+				inf_recon_bat = 1
+			}
+			support = {
+				inf_artillery_battery = 1
+			}
+		}
+
+		allowed_types = {
+			special_operational_bat
+			inf_engeener_bat
+			inf_artillery_battery
+			inf_recon_bat
+		}
+	}
+}
+
+#Air Infantry
+Air_Inf_generic = {
+	roles = { Air_Inf }
+	upgrade_prio = {
+		factor = 1
+	}
+
+	match_to_count = 0.8
+
+	mot_Air_Inf_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 0
+				num_of_factories < 26
+			}
+		}
+
+		target_width = 19
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				Mot_Air_Inf_Bat = 4
+
+			}
+			support = {
+				inf_artillery_battery = 1
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			mech_marine_bat
+			inf_artillery_battery
+			comp_recon
+		}
+	}
+}
+
+#Air Assault
+Air_assault_generic = {
+	roles = { Air_assault }
+	upgrade_prio = {
+		factor = 1
+	}
+	match_to_count = 0.8
+
+	Air_Inf_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 1
+				num_of_factories > 49
+			}
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				mech_selfpropelled_antiair_bat = 8
+				inf_engeener_bat = 1
+			}
+			support = {
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			mech_selfpropelled_antiair_bat
+			inf_engeener_bat
+			comp_recon
+		}
+	}
+
+	Air_Assault_division = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 1
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 5
+				num_of_factories > 60
+			}
+		}
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 15000.00
+			regiments = {
+				mech_selfpropelled_antiair_bat = 18
+				inf_engeener_bat = 1
+			}
+			support = {
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			inf_engeener_bat
+			comp_recon
+			mech_selfpropelled_antiair_bat
+		}
+	}
+	Arm_Air_assault_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 1
+				num_of_factories > 49
+			}
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				mech_selfpropelled_antiair_bat = 9
+			}
+			support = {
+				comp_recon = 1
+				comp_engeener = 1
+			}
+		}
+
+		allowed_types = {
+			mech_selfpropelled_antiair_bat
+			comp_recon
+			comp_engeener
+		}
+	}
+}
+
+#this is related to AI Motorized Brigade
+infantry_generic = {
+	roles = { infantry }
+	upgrade_prio = {
+		factor = 1
+	}
+	match_to_count = 0.8
+	infantry_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 1
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 0
+				num_of_factories > 49
+			}
+		}
+
+		target_width = 30
+		width_weight = 2
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				inf_motorized_infantry_bat = 6 #4*4 = 20
+				inf_engeener_bat = 1 #4
+			}
+			#30 CW
+			support = {
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			inf_motorized_infantry_bat
+			inf_engeener_bat
+			inf_recon_bat
+			inf_artillery_bat
+		}
+	}
+
+	infantry_division = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 2
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+		}
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 15000.0
+
+			regiments = {
+				inf_motorized_infantry_bat = 14 #4*4 = 20
+			}
+			#30 CW
+			support = {
+				comp_engeener = 1
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			inf_motorized_infantry_bat
+			comp_engeener
+			inf_recon_bat
+			inf_artillery_bat
+		}
+	}
+}
+
+#Mechanized Generic - Related to APC/IFV
+mechanized_generic = {
+	roles = { mechanized }
+	upgrade_prio = {
+		factor = 1
+	}
+
+	match_to_count = 0.8
+
+	mechanized_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1 #Base
+			modifier = { #Use Brigades if under 75 Factories
+				factor = 1
+				num_of_factories < 75
+			}
+			modifier = { #Use Regular APCs if you have over 4k
+				factor = 5
+				has_equipment = { eq_btr > 4000 }
+			}
+			modifier = { #Use Regular APCs if you have less than 4k IFVs
+				factor = 5
+				has_equipment = { eq_bmp < 4000 }
+			}
+			modifier = { #Ignore brigades if you have more than 75 factories
+				factor = 0
+				num_of_factories > 74
+			}
+			modifier = { #Ignore APCs when you have a good amount of IFVs
+				factor = 0
+				has_equipment = { eq_bmp > 4000 }
+			}
+			modifier = { #Ignore if you don't have the APCS
+				factor = 0
+				has_equipment = { eq_btr < 4000 }
+			}
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 5000.0
+
+			regiments = {
+				mech_mechanized_BTR_bat = 6
+			}
+			support = {
+				comp_tank = 1
+				comp_recon = 1
+				comp_engeener = 1
+			}
+		}
+
+		allowed_types = {
+			mech_tank_bat
+			comp_tank
+			mech_mechanized_BTR_bat
+			comp_recon
+			comp_engeener
+		}
+	}
+	armored_infantry_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = { #Use Mechanized Brigade if under 75
+				factor = 1
+				num_of_factories < 75
+			}
+			modifier = { #Use IFVs if you have less than 4k
+				factor = 5
+				has_equipment = { eq_btr < 4000 }
+			}
+			modifier = { #Use IFVs if you have a surplus
+				factor = 5
+				has_equipment = { eq_bmp > 4000 }
+			}
+			modifier = { #Ignore brigades if you have more than 75 factories
+				factor = 0
+				num_of_factories > 74
+			}
+			modifier = { #Ignore APCs when you have a good amount of IFVs
+				factor = 0
+				has_equipment = { eq_bmp < 4000 }
+			}
+			modifier = { #Ignore if you don't have the APCS
+				factor = 0
+				has_equipment = { eq_btr > 4000 }
+			}
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 6000.0
+
+			regiments = {
+				mech_mechanized_BMP_bat = 6
+			}
+			support = {
+				comp_tank = 1
+				comp_recon = 1
+				comp_engeener = 1
+			}
+		}
+
+		allowed_types = {
+			mech_tank_bat
+			mech_mechanized_BMP_bat
+			comp_tank
+			mech_mechanized_BTR_bat
+			comp_recon
+			comp_engeener
+		}
+	}
+	mechanized_division = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = { #Use Brigades if over 75
+				factor = 1
+				num_of_factories > 74
+			}
+			modifier = { #Use Regular APCs if you have over 4k
+				factor = 5
+				has_equipment = { eq_btr > 4000 }
+			}
+			modifier = { #Use Regular APCs if you have less than 4k IFVs
+				factor = 5
+				has_equipment = { eq_bmp < 4000 }
+			}
+			modifier = { #Ignore brigades if you have more than 75 factories
+				factor = 0
+				num_of_factories < 75
+			}
+			modifier = { #Ignore APCs when you have a good amount of IFVs
+				factor = 0
+				has_equipment = { eq_bmp > 4000 }
+			}
+			modifier = { #Ignore if you don't have the APCS
+				factor = 0
+				has_equipment = { eq_btr < 4000 }
+			}
+		}
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+
+		}
+
+		target_template = {
+			weight = 0.9 #Should get the AI to build units since its a bigger weight
+			match_value = 10000.0
+
+			regiments = {
+				mech_mechanized_BTR_bat = 10
+				inf_engeener_bat = 1
+				inf_recon_bat = 1
+				mech_selfpropelled_antiair_bat = 1
+				mech_selfpropelled_artillery_bat = 2
+			}
+			support = {
+				comp_tank = 1
+			}
+		}
+
+		allowed_types = {
+			mech_mechanized_BTR_bat
+			inf_engeener_bat
+			inf_recon_bat
+			mech_selfpropelled_antiair_bat
+			mech_selfpropelled_artillery_bat
+			comp_tank
+		}
+	}
+	armored_infantry_division = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = { #Use Mechanized Brigade if under 75
+				factor = 1
+				num_of_factories > 74
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = USA
+					tag = CHI
+					tag = SOV
+					tag = RAJ
+					tag = GER
+				}
+			}
+			modifier = {
+				factor = 5
+				OR = {
+					tag = ITA
+					tag = SPR
+					tag = POR
+					tag = ENG
+					tag = FRA
+					tag = TUR
+					tag = EGY
+					tag = BRA
+				}
+			}
+			modifier = { #Use IFVs if you have less than 4k
+				factor = 5
+				has_equipment = { eq_btr < 4000 }
+			}
+			modifier = { #Use IFVs if you have a surplus
+				factor = 5
+				has_equipment = { eq_bmp > 4000 }
+			}
+			modifier = { #Ignore brigades if you have more than 75 factories
+				factor = 0
+				num_of_factories < 75
+			}
+			modifier = { #Ignore APCs when you have a good amount of IFVs
+				factor = 0
+				has_equipment = { eq_bmp < 4000 }
+			}
+			modifier = { #Ignore if you don't have the APCS
+				factor = 0
+				has_equipment = { eq_btr > 4000 }
+			}
+		}
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 12000.0
+
+			regiments = {
+				mech_mechanized_BMP_bat = 10
+				inf_engeener_bat = 1
+				comp_recon = 1
+				mech_selfpropelled_antiair_bat = 1
+				mech_selfpropelled_artillery_bat = 2
+			}
+			support = {
+				comp_tank = 1
+			}
+		}
+
+		allowed_types = {
+			mech_tank_bat
+			comp_recon
+			mech_selfpropelled_artillery_bat
+			mech_selfpropelled_antiair_bat
+			mech_mechanized_BMP_bat
+			inf_engeener_bat
+			comp_tank
+			mech_mechanized_BMP_bat
+			mech_mechanized_BTR_bat
+			comp_engeener
+		}
+	}
+
+}
+
+#Armored Generic
+armor_generic = {
+	roles = { armor }
+
+	upgrade_prio = {
+		factor = 1
+	}
+
+	match_to_count = 0.8
+
+	armor_generic = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 1
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 0
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					tag = USA
+					tag = CHI
+					tag = SOV
+				}
+			}
+		}
+
+		target_width = 30
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				mech_tank_bat = 3
+				mech_mechanized_BMP_bat = 3
+				comp_recon = 1
+				mech_selfpropelled_artillery_bat = 2
+			}
+			support = {
+				comp_engeener = 1
+				mech_selfpropelled_antiair_battery = 1
+				comp_recon = 1
+			}
+		}
+
+		allowed_types = {
+			mech_tank_bat
+			mech_mechanized_BMP_bat
+			comp_recon
+			mech_selfpropelled_artillery_bat
+			comp_engeener
+			mech_selfpropelled_antiair_battery
+		}
+	}
+
+	armor_division = {
+		upgrade_prio = {
+			factor = 1
+		}
+		production_prio = {
+			factor = 1
+			modifier = {
+				factor = 2
+				num_of_factories > 49
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					tag = USA
+					tag = SOV
+					tag = CHI
+				}
+			}
+			modifier = {
+				factor = 0
+				num_of_factories < 50
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					tag = USA
+					tag = SOV
+					tag = CHI
+				}
+			}
+		}
+
+		target_width = 60
+		width_weight = 1
+		column_swap_factor = 0.5
+
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			2.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			8.00 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- build_cost_ic
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+		}
+
+		target_template = {
+			weight = 0.9
+			match_value = 9000.0
+
+			regiments = {
+				mech_tank_bat = 6
+				mech_mechanized_BMP_bat = 6
+				comp_recon = 2
+				mech_selfpropelled_artillery_bat = 4
+				inf_engeener_bat = 2
+			}
+			support = {
+				comp_engeener = 1
+				mech_selfpropelled_antiair_battery = 1
+			}
+		}
+
+		allowed_types = {
+			mech_tank_bat
+			mech_mechanized_BMP_bat
+			comp_recon
+			mech_selfpropelled_artillery_bat
+			comp_recon
+			comp_engeener
+			mech_selfpropelled_antiair_battery
+		}
+	}
+}

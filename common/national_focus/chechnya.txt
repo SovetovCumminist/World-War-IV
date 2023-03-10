@@ -1,0 +1,91 @@
+﻿ focus_tree = {
+	id = chechnya_focuses
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10 
+			tag = CHE 
+		}
+	}
+	
+	continuous_focus_position = { x = 50 y = 1970 }
+	default = no
+
+	initial_show_position = {
+		focus = CHE_referendum
+	}
+	
+	
+	focus = {
+		id = CHE_referendum
+		icon = GFX_iconcu_sdelayte_syki
+		x = 2
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			is_puppet = no
+		}
+		completion_reward = {
+			add_political_power = -50
+			hidden_effect = {
+				country_event = { id = rus_dem_civil_war.6 days = 15 } #приход Стрелкова
+				country_event = { id = rusNews.11 days = 1 }
+			}
+		}
+	}
+	focus = {
+		id = CHE_aggressive_dagestan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 1
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			is_puppet = no
+		}
+		prerequisite = { focus = CHE_referendum }
+		completion_reward = {
+			every_country = {
+				limit = { controls_state = 232 }
+				release = DAG
+			}
+			hidden_effect = { DAG = { load_oob = "WR_DAGESTAN" } }
+			declare_war_on = { target = DAG type = annex_everything }
+		}
+	}
+	focus = {
+		id = CHE_aggressive_ingushetia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 3
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			is_puppet = no
+		}
+		prerequisite = { focus = CHE_referendum }
+		completion_reward = {
+			every_country = {
+				limit = { controls_state = 858 }
+				release = CIN
+			}
+			hidden_effect = { CIN = { load_oob = "WR_DAGESTAN" } }
+			declare_war_on = { target = CIN type = annex_everything }
+		}
+	}
+}

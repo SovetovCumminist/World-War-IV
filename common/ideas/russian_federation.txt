@@ -1,0 +1,155 @@
+ideas = {
+    country = {
+        SOV_Putin_s_friends = { #Содержание Путина и окружения
+
+			name = SOV_Putin_s_friends
+
+			picture = Soderjanie_President
+
+			allowed = {
+				original_tag = SOV
+                #OR = {
+                #    SOV_vladimir_putin = { is_country_leader = yes }
+                #    #Или он царь
+                #}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.10
+                political_power_gain = 0.1
+                consumer_goods_factor = 0.15
+                global_building_slots = -0.1
+			}
+		}
+        SOV_ohrenenaya_corruption = { #Благо коррупции. В случае смены режима, свапнется на "Повальная коррупция"
+
+			name = SOV_ohrenenaya_corruption
+
+			picture = Rus_Corruption
+
+			allowed = {
+				original_tag = SOV
+                has_country_flag = Putin_s_elite
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+                political_power_factor = 0.2
+                industry_air_damage_factor = 0.5
+                production_speed_buildings_factor = -0.25
+			}
+		}
+		SOV_endemic_corruption = { #Повальная коррупция
+
+			name = SOV_endemic_corruption
+
+			picture = Rus_Corruption_No_Putin
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+                industry_air_damage_factor = 0.5
+                production_speed_buildings_factor = -0.20
+			}
+		}
+        SOV_memory_of_the_Bolotnaya_Square = { #Память о Болотной площади
+
+            name = SOV_memory_of_the_Bolotnaya_Square
+
+			picture = Bolotnaya
+
+			allowed = {
+            	#SOV_vladimir_putin = { is_country_leader = yes }
+				original_tag = SOV
+				OR = { 
+					has_government = neutrality
+					has_government = paternalism
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				democratic_drift = 0.03
+				conservocratic_drift = 0.03
+				liberocratic_drift = 0.03
+                communism_drift = 0.01
+				anarchy_drift = 0.01
+                democratic_acceptance = -30
+                liberocratic_acceptance = -30
+                conservocratic_acceptance = -30
+			}
+        }
+		SOV_hard_adaptation = { #Тяжёлая адаптация
+		
+            name = SOV_hard_adaptation
+
+			picture = kto_nibud_narisuyte
+
+			allowed = {
+            	#SOV_vladimir_putin = { is_country_leader = yes }
+				original_tag = SOV
+				has_government = democratic
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = -0.05
+				political_power_factor = -0.5
+			}
+        }
+		SOV_vagner = { #ЧВК "Вагнер"
+		
+            name = SOV_vagner
+
+			picture = Vagner
+
+			allowed = {
+				original_tag = SOV
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_army = 0.05
+				training_time_factor = -0.1
+			}
+        }
+		Dependence_on_russian_gas = { # Зависимость от российского газа
+		
+            name = Dependence_on_russian_gas
+
+			picture = gas_addiction
+
+			allowed = {
+				original_tag = SOV
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+			}
+        }
+    }
+}

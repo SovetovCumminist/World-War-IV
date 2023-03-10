@@ -1,0 +1,74 @@
+defined_text = {
+    name = get_superevent_aboba
+	
+    text = {
+        trigger = {
+            has_global_flag = GER_Nazi
+        }
+        localization_key = "GFX_sp_event_ger_nazi"
+	}
+	
+    text = {
+        trigger = {
+            has_global_flag = Great_Ukr
+        }
+        localization_key = "GFX_sp_event_great_ukr"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = Ukr_Civil_War
+        }
+        localization_key = "GFX_sp_event_ukr_civil_war"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = LDNR
+        }
+        localization_key = "GFX_sp_event_ldnr"
+	}
+	
+    text = {
+        trigger = {
+            has_global_flag = radio_dicature
+        }
+        localization_key = "GFX_sp_event_radio_dicature"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = limonov
+        }
+        localization_key = "GFX_sp_event_limonov"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = bashar
+        }
+        localization_key = "GFX_sp_event_bashar"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = opsy
+        }
+        localization_key = "GFX_sp_event_opsy"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = nemtsov_president
+        }
+        localization_key = "GFX_sp_event_nemtsov"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = war_ukr
+        }
+        localization_key = "GFX_sp_event_war_ukr"
+	}
+
+} 

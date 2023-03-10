@@ -1,0 +1,40 @@
+Putin_or_Libers = {
+	icon = GFX_decision_category_military_operation
+	#picture = GFX_decision_democratic_revolt
+	allowed = { 
+		original_tag = WRG
+	}
+	visible = {
+		NOT = { has_country_flag = WRG_made_choice }
+	}
+}
+
+Return_Crimea = {
+	icon = GFX_decision_category_military_operation
+	#picture = GFX_decision_democratic_revolt
+	allowed = { 
+		original_tag = UKR
+	}
+	visible = {
+		SOV = { has_war_with = WRP }
+	}
+}
+
+Chinese_Intervention = {
+	icon = GFX_decision_category_military_operation
+	#picture = GFX_decision_democratic_revolt
+	allowed = { 
+		original_tag = PRC
+	}
+	visible = {
+		SOV = { has_war_with = WRP }
+		PRC = { 
+			OR = {
+				has_government = neutrality
+				has_government = communism
+				has_government = reactionism
+				has_government = fascism
+			}
+		}
+	}
+}

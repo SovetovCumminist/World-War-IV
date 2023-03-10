@@ -1,0 +1,66 @@
+Modern_template_design = {
+
+	enable = {
+		always = yes			
+	}
+	
+	abort = {
+	num_of_military_factories < 5
+	
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = -60
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -180
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 30
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 60
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -10
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 80
+	}
+
+}

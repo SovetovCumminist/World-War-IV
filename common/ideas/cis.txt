@@ -1,0 +1,73 @@
+ideas = {
+    country = {
+        Eurasian_Customs_Union = { #Таможенный союз
+
+			name = Eurasian_Customs_Union
+
+			picture = Eurasia_Soyuz
+
+			allowed = {
+				NOT = {
+                    has_war_with = SOV
+                }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+                neutrality_acceptance = 10
+			}
+		}
+		CIS_member = {
+			allowed = {
+				always = no
+			}
+
+			available = {
+				and = {	
+					not = {
+						or = {
+							has_government = anarchy
+							has_government = communism
+							has_government = fascism
+						}
+					}
+					not = {
+						any_country = {
+							and = {
+								has_idea = CIS_member
+								ROOT = { has_offensive_war_with = PREV }
+							}
+						}
+					}
+					or = {
+						not = { is_puppet = yes }
+						any_country = {
+							has_idea = CIS_member
+							ROOT = { is_puppet_of = PREV }
+						}
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				not = {
+					or = {
+						has_government = anarchy
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = cis
+
+			modifier = {
+			}
+		}
+	}
+}

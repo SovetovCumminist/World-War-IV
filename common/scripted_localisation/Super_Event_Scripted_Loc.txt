@@ -1,0 +1,214 @@
+#Titles
+
+defined_text = {
+    name = get_super_event_title
+	
+    text = {
+        trigger = {
+            has_global_flag = GER_Nazi
+        }
+        localization_key = "sp_event_Ger_Nazi"
+	}
+	
+    text = {
+        trigger = {
+            has_global_flag = Great_Ukr
+        }
+        localization_key = "sp_event_Great_Ukr"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = Ukr_Civil_War
+        }
+        localization_key = "sp_event_Ukr_Civil_War"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = LDNR
+        }
+        localization_key = "sp_event_LDNR"
+	}
+    text = {
+        trigger = {
+            has_global_flag = radio_dicature
+        }
+        localization_key = "sp_event_radio_dicature"
+	}
+    text = {
+        trigger = {
+            has_global_flag = limonov
+        }
+        localization_key = "sp_event_limonov"
+	}
+    text = {
+        trigger = {
+            has_global_flag = bashar
+        }
+        localization_key = "sp_event_bashar"
+	}
+    text = {
+        trigger = {
+            has_global_flag = opsy
+        }
+        localization_key = "sp_event_opsy"
+	}
+    text = {
+        trigger = {
+            has_global_flag = nemtsov_president
+        }
+        localization_key = "sp_event_nemtsov_president"
+	}
+    text = {
+        trigger = {
+            has_global_flag = war_ukr
+        }
+        localization_key = "sp_event_war_ukr"
+	}
+}
+
+#Remark
+
+defined_text = {
+    name = get_super_event_remark
+    
+    text = { 
+        trigger = {
+            has_global_flag = GER_Nazi
+        }
+        localization_key = "sp_event_Ger_Nazi_REMARK"
+    }
+    
+    text = { 
+        trigger = {
+            has_global_flag = Great_Ukr
+        }
+        localization_key = "sp_event_Great_Ukr_REMARK"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = Ukr_Civil_War
+        }
+        localization_key = "sp_event_Ukr_Civil_War_REMARK"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = LDNR
+        }
+        localization_key = "sp_event_LDNR_REMARK"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = radio_dicature
+        }
+        localization_key = "sp_event_radio_dicature_REMARK"
+    }
+    text = {
+        trigger = {
+            has_global_flag = limonov
+        }
+        localization_key = "sp_event_limonov_REMARK"
+	}
+    text = {
+        trigger = {
+            has_global_flag = bashar
+        }
+        localization_key = "sp_event_bashar_REMARK"
+	}
+    text = {
+        trigger = {
+            has_global_flag = opsy
+        }
+        localization_key = "sp_event_opsy_REMARK"
+	}
+    text = { 
+        trigger = {
+            has_global_flag = nemtsov_president
+        }
+        localization_key = "sp_event_nemtsov_president_REMARK"
+    }
+    text = {
+        trigger = {
+            has_global_flag = war_ukr
+        }
+        localization_key = "sp_event_war_ukr_REMARK"
+	}
+}
+
+#Quote
+
+defined_text = {
+    name = get_super_event_quote
+    
+    text = {
+        trigger = {
+            has_global_flag = GER_Nazi
+        }
+        localization_key = "sp_event_Ger_Nazi_QUOTE"
+    }
+    
+    text = {
+        trigger = {
+            has_global_flag = Great_Ukr
+        }
+        localization_key = "sp_event_Great_Ukr_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = Ukr_Civil_War
+        }
+        localization_key = "sp_event_Ukr_Civil_War_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = LDNR
+        }
+        localization_key = "sp_event_LDNR_QUOTE"
+    }
+	
+    text = {
+        trigger = {
+            has_global_flag = radio_dicature
+        }
+        localization_key = "sp_event_radio_dicature_QUOTE"
+    }
+
+    text = {
+        trigger = {
+            has_global_flag = limonov
+        }
+        localization_key = "sp_event_limonov_QUOTE"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = bashar
+        }
+        localization_key = "sp_event_bashar_QUOTE"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = opsy
+        }
+        localization_key = "sp_event_opsy_QUOTE"
+	}
+
+    text = {
+        trigger = {
+            has_global_flag = nemtsov_president
+        }
+        localization_key = "sp_event_nemtsov_president_QUOTE"
+    }
+    text = {
+        trigger = {
+            has_global_flag = war_ukr
+        }
+        localization_key = "sp_event_war_ukr_QUOTE"
+	}
+}

@@ -1,0 +1,575 @@
+defined_text = {
+    name = conservatism_scripted_loc
+    text = {
+        localization_key = generic_conservatism_name_party
+    }
+    text = {
+        trigger = {
+            tag = SOV
+        }
+        localization_key = SOV_conservatism_name_party
+    }
+}
+
+defined_text = {
+    name = neo_conservatism_scripted_loc
+    text = {
+        localization_key = generic_neo_conservatism_name_party
+    }
+}
+
+defined_text = {
+    name = con_liberalism_scripted_loc
+    text = {
+        localization_key = generic_con_liberalism_name_party
+    }
+}
+
+defined_text = {
+    name = liberalism_scripted_loc
+    text = {
+        localization_key = generic_liberalism_name_party
+    }
+    text = {
+        trigger = {
+            tag = SOV
+            date < 2014.3.8
+        }
+        localization_key = RusBud_1
+    }
+    text = {
+        trigger = {
+            tag = SOV
+            date > 2014.3.8
+            date < 2018.5.19
+        }
+        localization_key = RusBud_2
+    }
+    text = {
+        trigger = {
+            tag = SOV
+            date > 2018.5.19
+        }
+        localization_key = RusBud_3
+    }
+}
+
+defined_text = {
+    name = neo_liberalism_scripted_loc
+    text = {
+        localization_key = generic_neo_liberalism_name_party
+    }
+}
+
+defined_text = {
+    name = libertarianism_scripted_loc
+    text = {
+        localization_key = generic_libertarianism_name_party
+    }
+}
+
+defined_text = {
+    name = socialism_scripted_loc
+    text = {
+        localization_key = generic_socialism_name_party
+    }
+}
+
+defined_text = {
+    name = progressivism_scripted_loc
+    text = {
+        localization_key = generic_progressivism_name_party
+    }
+}
+
+defined_text = {
+    name = marxism_scripted_loc
+    text = {
+        localization_key = generic_marxism_name_party
+    }
+}
+
+defined_text = {
+    name = leninism_scripted_loc
+    text = {
+        localization_key = generic_leninism_name_party
+    }
+}
+
+defined_text = {
+    name = stalinism_scripted_loc
+    text = {
+        localization_key = generic_stalinism_name_party
+    }
+}
+
+defined_text = {
+    name = trotskyism_scripted_loc
+    text = {
+        localization_key = generic_trotskyism_name_party
+    }
+}
+
+defined_text = {
+    name = libertarian_communism_scripted_loc
+    text = {
+        localization_key = generic_libertarian_communism_name_party
+    }
+}
+
+defined_text = {
+    name = national_communism_scripted_loc
+    text = {
+        localization_key = generic_national_communism_name_party
+    }
+}
+
+defined_text = {
+    name = etn_socialism_scripted_loc
+    text = {
+        localization_key = generic_etn_socialism_name_party
+    }
+}
+
+defined_text = {
+    name = maoism_scripted_loc
+    text = {
+        localization_key = generic_maoism_name_party
+    }
+}
+
+defined_text = {
+    name = nazism_scripted_loc
+    text = {
+        localization_key = generic_nazism_name_party
+    }
+}
+
+defined_text = {
+    name = fascism_ideology_scripted_loc
+    text = {
+        localization_key = generic_fascism_ideology_name_party
+    }
+}
+
+defined_text = {
+    name = falangism_scripted_loc
+    text = {
+        localization_key = generic_falangism_name_party
+    }
+}
+
+defined_text = {
+    name = ultranationalism_scripted_loc
+    text = {
+        localization_key = generic_ultranationalism_name_party
+    }
+}
+
+defined_text = {
+    name = absolutism_scripted_loc
+    text = {
+        localization_key = generic_absolutism_name_party
+    }
+}
+
+defined_text = {
+    name = islamism_scripted_loc
+    text = {
+        localization_key = generic_islamism_name_party
+    }
+}
+
+defined_text = {
+    name = fundamentalism_scripted_loc
+    text = {
+        localization_key = generic_fundamentalism_name_party
+    }
+}
+
+defined_text = {
+    name = despotism_scripted_loc
+    text = {
+        localization_key = generic_despotism_name_party
+    }
+}
+
+defined_text = {
+    name = profascism_scripted_loc
+    text = {
+        localization_key = generic_profascism_name_party
+    }
+}
+
+defined_text = {
+    name = moderatism_scripted_loc
+    text = {
+        localization_key = generic_moderatism_name_party
+    }
+}
+
+defined_text = {
+    name = centrism_scripted_loc
+    text = {
+        localization_key = generic_centrism_name_party
+    }
+}
+
+defined_text = {
+    name = nationalism_ideology_scripted_loc
+    text = {
+        localization_key = generic_nationalism_ideology_name_party
+    }
+}
+
+defined_text = {
+    name = postsocialism_scripted_loc
+    text = {
+        localization_key = generic_postsocialism_name_party
+    }
+}
+
+defined_text = {
+    name = national_conservatism_scripted_loc
+    text = {
+        localization_key = generic_national_conservatism_name_party
+    }
+}
+
+defined_text = {
+    name = national_liberalism_scripted_loc
+    text = {
+        localization_key = generic_national_liberalism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_communism_scripted_loc
+    text = {
+        localization_key = generic_anarchist_communism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchism_scripted_loc
+    text = {
+        localization_key = generic_anarchism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_capitalist_scripted_loc
+    text = {
+        localization_key = generic_anarchist_capitalist_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_primitivism_scripted_loc
+    text = {
+        localization_key = generic_anarchist_primitivism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_egoism_scripted_loc
+    text = {
+        localization_key = generic_anarchist_egoism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_tech_scripted_loc
+    text = {
+        localization_key = generic_anarchist_tech_name_party
+    }
+}
+
+###Long###
+
+defined_text = {
+    name = conservatism_scripted_loc_long
+    text = {
+        localization_key = generic_conservatism_name_party
+    }
+    text = {
+        trigger = {
+            tag = SOV
+        }
+        localization_key = SOV_conservatism_name_party
+    }
+}
+
+defined_text = {
+    name = neo_conservatism_scripted_loc_long
+    text = {
+        localization_key = generic_neo_conservatism_name_party
+    }
+}
+
+defined_text = {
+    name = con_liberalism_scripted_loc_long
+    text = {
+        localization_key = generic_con_liberalism_name_party
+    }
+}
+
+defined_text = {
+    name = liberalism_scripted_loc_long
+    text = {
+        localization_key = generic_liberalism_name_party
+    }
+    text = {
+        trigger = {
+            tag = SOV
+            date < 2014.3.8
+        }
+        localization_key = RusBud_1_long
+    }
+    text = {
+        trigger = {
+            tag = SOV
+            date > 2014.3.8
+            date < 2018.5.19
+        }
+        localization_key = RusBud_2_long
+    }
+    text = {
+        trigger = {
+            tag = SOV
+            date > 2018.5.19
+        }
+        localization_key = RusBud_3_long
+    }
+}
+
+defined_text = {
+    name = neo_liberalism_scripted_loc_long
+    text = {
+        localization_key = generic_neo_liberalism_name_party
+    }
+}
+
+defined_text = {
+    name = libertarianism_scripted_loc_long
+    text = {
+        localization_key = generic_libertarianism_name_party
+    }
+}
+
+defined_text = {
+    name = socialism_scripted_loc_long
+    text = {
+        localization_key = generic_socialism_name_party
+    }
+}
+
+defined_text = {
+    name = progressivism_scripted_loc_long
+    text = {
+        localization_key = generic_progressivism_name_party
+    }
+}
+
+defined_text = {
+    name = marxism_scripted_loc_long
+    text = {
+        localization_key = generic_marxism_name_party
+    }
+}
+
+defined_text = {
+    name = leninism_scripted_loc_long
+    text = {
+        localization_key = generic_leninism_name_party
+    }
+}
+
+defined_text = {
+    name = stalinism_scripted_loc_long
+    text = {
+        localization_key = generic_stalinism_name_party
+    }
+}
+
+defined_text = {
+    name = trotskyism_scripted_loc_long
+    text = {
+        localization_key = generic_trotskyism_name_party
+    }
+}
+
+defined_text = {
+    name = libertarian_communism_scripted_loc_long
+    text = {
+        localization_key = generic_libertarian_communism_name_party
+    }
+}
+
+defined_text = {
+    name = national_communism_scripted_loc_long
+    text = {
+        localization_key = generic_national_communism_name_party
+    }
+}
+
+defined_text = {
+    name = etn_socialism_scripted_loc_long
+    text = {
+        localization_key = generic_etn_socialism_name_party
+    }
+}
+
+defined_text = {
+    name = maoism_scripted_loc_long
+    text = {
+        localization_key = generic_maoism_name_party
+    }
+}
+
+defined_text = {
+    name = nazism_scripted_loc_long
+    text = {
+        localization_key = generic_nazism_name_party
+    }
+}
+
+defined_text = {
+    name = fascism_ideology_scripted_loc_long
+    text = {
+        localization_key = generic_fascism_ideology_name_party
+    }
+}
+
+defined_text = {
+    name = falangism_scripted_loc_long
+    text = {
+        localization_key = generic_falangism_name_party
+    }
+}
+
+defined_text = {
+    name = ultranationalism_scripted_loc_long
+    text = {
+        localization_key = generic_ultranationalism_name_party
+    }
+}
+
+defined_text = {
+    name = absolutism_scripted_loc_long
+    text = {
+        localization_key = generic_absolutism_name_party
+    }
+}
+
+defined_text = {
+    name = islamism_scripted_loc_long
+    text = {
+        localization_key = generic_islamism_name_party
+    }
+}
+
+defined_text = {
+    name = fundamentalism_scripted_loc_long
+    text = {
+        localization_key = generic_fundamentalism_name_party
+    }
+}
+
+defined_text = {
+    name = despotism_scripted_loc_long
+    text = {
+        localization_key = generic_despotism_name_party
+    }
+}
+
+defined_text = {
+    name = profascism_scripted_loc_long
+    text = {
+        localization_key = generic_profascism_name_party
+    }
+}
+
+defined_text = {
+    name = moderatism_scripted_loc_long
+    text = {
+        localization_key = generic_moderatism_name_party
+    }
+}
+
+defined_text = {
+    name = centrism_scripted_loc_long
+    text = {
+        localization_key = generic_centrism_name_party
+    }
+}
+
+defined_text = {
+    name = nationalism_ideology_scripted_loc_long
+    text = {
+        localization_key = generic_nationalism_ideology_name_party
+    }
+}
+
+defined_text = {
+    name = postsocialism_scripted_loc_long
+    text = {
+        localization_key = generic_postsocialism_name_party
+    }
+}
+
+defined_text = {
+    name = national_conservatism_scripted_loc_long
+    text = {
+        localization_key = generic_national_conservatism_name_party
+    }
+}
+
+defined_text = {
+    name = national_liberalism_scripted_loc_long
+    text = {
+        localization_key = generic_national_liberalism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_communism_scripted_loc_long
+    text = {
+        localization_key = generic_anarchist_communism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchism_scripted_loc_long
+    text = {
+        localization_key = generic_anarchism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_capitalist_scripted_loc_long
+    text = {
+        localization_key = generic_anarchist_capitalist_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_primitivism_scripted_loc_long
+    text = {
+        localization_key = generic_anarchist_primitivism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_egoism_scripted_loc_long
+    text = {
+        localization_key = generic_anarchist_egoism_name_party
+    }
+}
+
+defined_text = {
+    name = anarchist_tech_scripted_loc_long
+    text = {
+        localization_key = generic_anarchist_tech_name_party
+    }
+}

@@ -1,0 +1,43 @@
+# defined_text = { # Country
+# 	name = winter_spring_summer_autumn_sl
+# 	text = {
+# 		trigger = {
+# 			OR = {
+#                 check_variable = { winter_spring_summer_autumn = 1 }
+#                 check_variable = { winter_spring_summer_autumn = 2 }
+#                 check_variable = { winter_spring_summer_autumn = 12 }
+#             }
+# 		}
+# 		localization_key = WINTER
+# 	}
+# 	text = {
+# 		trigger = {
+# 			OR = {
+#                 check_variable = { winter_spring_summer_autumn = 3 }
+#                 check_variable = { winter_spring_summer_autumn = 4 }
+#                 check_variable = { winter_spring_summer_autumn = 5 }
+#             }
+# 		}
+# 		localization_key = SPRING
+# 	}
+#     text = {
+# 		trigger = {
+# 			OR = {
+#                 check_variable = { winter_spring_summer_autumn = 6 }
+#                 check_variable = { winter_spring_summer_autumn = 7 }
+#                 check_variable = { winter_spring_summer_autumn = 8 }
+#             }
+# 		}
+# 		localization_key = SUMMER
+# 	}
+#     text = {
+# 		trigger = {
+# 			OR = {
+#                 check_variable = { winter_spring_summer_autumn = 9 }
+#                 check_variable = { winter_spring_summer_autumn = 10 }
+#                 check_variable = { winter_spring_summer_autumn = 11 }
+#             }
+# 		}
+# 		localization_key = AUTUMN
+# 	}
+# }

@@ -1,0 +1,22 @@
+on_actions = {
+
+	#ROOT is winner #FROM gets annexed - This will also fire on_annex
+	on_civil_war_end = {
+		effect = {
+			# Give UKS focus tree to Nazi Ukraine if they win the civil war.
+			if = {
+				limit = {
+					original_tag = UKS
+					has_government = fascism
+					has_focus_tree = generic_focus
+					FROM = {
+						original_tag = UKS
+						NOT = { has_government = fascism }
+					}
+				}
+				load_focus_tree = { tree = ukraine_focus keep_completed = no }
+				unlock_national_focus = UKR_maidan_goals
+			}
+		}
+	}
+}

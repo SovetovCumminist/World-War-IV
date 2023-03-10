@@ -1,0 +1,131 @@
+on_actions = { 
+# ROOT is capitulated country, FROM is winner
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { state = 341 }
+					ROOT = { has_country_flag = BOSPHORUS_STRAIT_BLOCKED_FOR_COUNTRY }
+				}
+				GRE = { clr_country_flag = BOSPHORUS_STRAIT_BLOCKED_FOR_COUNTRY }
+				SOV = { clr_country_flag = BOSPHORUS_STRAIT_BLOCKED_FOR_COUNTRY }
+			}
+		}
+	}
+	
+	#ROOT = attacking side
+	#FROM = defending side
+	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = BUL 
+					}
+					ROOT = {
+						original_tag = BUL
+					}
+					YUG = { has_government = communism }
+				}
+				random_country = {
+					limit = {
+						original_tag = BUL
+						has_government = communism
+					}
+					set_cosmetic_tag = YUG_puppet_1
+				}
+			}
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = ALB 
+					}
+					ROOT = {
+						original_tag = ALB
+					}
+					YUG = { has_government = communism }
+				}
+				random_country = {
+					limit = {
+						original_tag = ALB
+						has_government = communism
+					}
+					set_cosmetic_tag = YUG_puppet_2
+				}
+			}
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = GRE 
+					}
+					ROOT = {
+						original_tag = GRE
+					}
+					YUG = { has_government = communism }
+				}
+				random_country = {
+					limit = {
+						original_tag = GRE
+						has_government = communism
+					}
+					set_cosmetic_tag = YUG_puppet_3
+				}
+			}
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = ROM 
+					}
+					ROOT = {
+						original_tag = ROM
+					}
+					YUG = { has_government = communism }
+				}
+				random_country = {
+					limit = {
+						original_tag = ROM
+						has_government = communism
+					}
+					set_cosmetic_tag = YUG_puppet_4
+				}
+			}
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = HUN 
+					}
+					ROOT = {
+						original_tag = HUN
+					}
+					YUG = { has_government = communism }
+				}
+				random_country = {
+					limit = {
+						original_tag = HUN
+						has_government = communism
+					}
+					set_cosmetic_tag = YUG_puppet_5
+				}
+			}
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = TUR 
+					}
+					ROOT = {
+						original_tag = TUR
+					}
+					YUG = { has_government = communism }
+				}
+				random_country = {
+					limit = {
+						original_tag = TUR
+						has_government = communism
+					}
+					set_cosmetic_tag = YUG_puppet_6
+				}
+			}
+		}
+	}
+}

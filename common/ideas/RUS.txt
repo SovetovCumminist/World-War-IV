@@ -1,0 +1,23 @@
+ideas = {
+	country = {
+	
+	Soviets = {
+		
+		picture = SPR_class_war
+		
+		allowed = {
+			has_war = no
+		}
+		
+		allowed_civil_war = {
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_factor = -0.01
+			political_power_factor = -0.25
+			communism_drift = 0.05
+		}
+	}
+}

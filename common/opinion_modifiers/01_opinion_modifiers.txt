@@ -1,0 +1,28 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	tariffs = {
+		trade = yes
+		value = -10
+	}
+	
+	war_profitering = {
+		trade = yes
+		value = 10
+	}
+	
+	sold_us_equip = {
+		trade = yes
+		value = 20
+	}
+
+}

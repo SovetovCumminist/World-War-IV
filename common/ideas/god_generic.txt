@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+	
+	gripe_espanola = {
+		
+		picture = ENG_the_war_to_end_all_wars
+		
+		allowed = {
+		}
+		
+		allowed_civil_war = {
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			monthly_population = -0.20
+			stability_factor = -0.01
+		}
+	}
+	
+	quit_movement = {
+		
+		picture = FRA_scw_intervention_republicans_focus
+		
+		allowed = {
+			#is_subject = yes
+		}
+		
+		allowed_civil_war = {
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			autonomy_gain = 0.4
+		}
+	}
+}
